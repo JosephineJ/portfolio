@@ -1,0 +1,22 @@
+<div class="row">
+	<article class="col-xs-12">
+		<h2><strong>Current & Former Web Projects</strong></h2>
+		<p class="comment">Series of past and current front-end projects </p>
+	</article>
+</div>
+<div class="row centered">
+	<div class="col-xs-12">
+		<div class="row">
+			{{#each model as |model|}}
+			<div class="col-sm-4 mt-1 centered">
+				{{#link-to 'project' model.id classNames=model.id }}<span class="banner">{{model.id}}</span>{{/link-to}}
+			</div>
+			{{/each}} 
+		</div>
+	</div>	
+</div>
+<div class="row">
+	<div class="col-xs-12 centered">
+		<p><a href="/about#contactjessica" class="action button">Get into Contact</a></p>
+	</div>
+</div>

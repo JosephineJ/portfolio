@@ -1,0 +1,57 @@
+
+	 
+	 {{#if isClosed}}
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-sm-7 mt-1 centered">
+				<div class="row">
+				    <div class="col-xs-1 pad-right-0">
+						{{#link-to 'projects.overview' classNames="goback-bubble" title="Go back"}}{{fa-icon 'caret-left'}}{{/link-to}}
+					</div>
+					<div class="col-xs-11 pad-left-0">
+						<article class="box-back-wrapper" {{action "openSlides"}}>				
+							<div class="box box-back box-{{projdata.id}}"></div>
+							<div class="see-more" >
+							<span>LOOK INSIDE</span>
+							</div> 
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-5 mb-1 mt-1">
+				<article class="row">
+					<div class="col-xs-12">
+						<h2>Project <strong>{{projdata.name}}</strong></h2>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="proj-facts">Company: <strong class="right">{{projdata.employer}}</strong></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<p class="proj-facts">Tech Stack: <strong class="right">{{projdata.technologies}}</strong></p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<div><p>{{projdata.description}}</p></div>
+				<hr class="line">
+			</div>
+		</div>				
+	</div>		    
+	{{else}}
+	<div class="shade">
+		<div class="col-xs-12">
+			<div class="row">
+			<div class="col-xs-12">
+			<a class="close-bubble" {{action "closeSlides"}}>{{fa-icon 'close' size=3}}</a>
+			{{#each projdata.screenshots as |screenshot|}}
+				{{project-slide slidedata=screenshot }}
+			{{/each}}
+			</div>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+
