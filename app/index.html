@@ -3,26 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jessica Jordan | Front End Development</title>
-    <meta name="description" content="Jessica Jordan - Systems Biologist and Front End Developer - offers Web Development in Ember.js, HTML5, CSS3 and Javascript, UX/UI Optimization and A/B Testing of Websites">
-    <meta name="author" content="Jessica Jordan">
-    <meta name="robots" content="index,follow" />
-    <meta name="fragment" content="!">
+    <title>PortfolioRedo</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for 'head'}}
-	<link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/jj-portfolio.css">
+    {{content-for "head"}}
 
-    {{content-for 'head-footer'}}
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/portfolio-redo.css">
+
+    {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for 'body'}}
+    {{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/jj-portfolio.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/portfolio-redo.js"></script>
 
-    {{content-for 'body-footer'}}
+    {{content-for "body-footer"}}
   </body>
 </html>
