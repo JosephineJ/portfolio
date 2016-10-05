@@ -6,15 +6,16 @@ html, body {
 }
 .main-header {
   h1 {
-    font-size: 2em;
+    font-size: 4vh;
+    margin: 3.5vh 0 2.5vh 0;
   }
 }
 .card {
  
   overflow: hidden; 
-  @for $i from 1 through 12 {
+  @for $i from 1 through 100 {
     &.height-#{$i}{
-      height: 100vh * $i / 12 - 2;
+      height: 100vh * $i / 100 - 2;
       margin: 0.5vh 0 1.5vh;
     }
   }
@@ -30,5 +31,60 @@ html, body {
   .card-content {
     position: absolute;
     bottom: 0;
+  }
+}
+
+.md-card-extended {
+  .card-reveal {
+
+    &.punk {
+      background-color: $punk;
+    }
+    &.dark-punk {
+      background-color: $dark-punk;
+    }
+    &.lilac {
+      background-color: $lilac;
+    }
+    &.dark-gray {
+      background-color: $dark-gray;
+    }
+    &.gray {
+      background-color: $gray;
+    }
+    &.what {
+      background-color: $what;
+    }
+
+    .card-main-title {
+      position: absolute;
+      font-size: 4vh;
+      bottom: 1.5vh;
+      left: 3vh;
+    }
+    .social-icon {
+      height: 10vh;
+      width: auto;
+      margin: 0 auto;
+    }
+    .mail-icon {
+      font-size: 9vh;
+      margin: .5vh auto 0;
+    }
+  }
+  
+}
+
+.row {
+  &.no-margin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container & {
+    
+    &.no-margin {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
+    }
   }
 }

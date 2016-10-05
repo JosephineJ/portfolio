@@ -1,5 +1,9 @@
-@for $i from 1 through 12 {
+@for $i from 1 through 100 {
   .height-#{$i}{
-    height: 100vh * $i / 12;
+    height: 100vh * $i / 100;
   }
+}
+
+.no-margin {
+  margin: 0;
 }

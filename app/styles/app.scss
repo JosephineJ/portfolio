@@ -1,10 +1,19 @@
-@import 'components/color';
+// variables
+$punk: rgba(200,80,200,0.75);
+$dark-punk: darken($punk, 40%);
+$lilac: violet;
+$gray: rgba(200,200,200,0.75);
+$dark-gray: darken($gray, 40%);
+$what: rgba(255,255,255,0.75);
 
+//import materialize
+@import 'components/color';
 // Custom color settings go here
 $primary-color: color("pink", "lighten-2");
-
 @import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+//import substyles
 @import 'theme/layout';
 @import 'theme/helpers';
