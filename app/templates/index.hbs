@@ -8,6 +8,7 @@
     <div class="col s12 l6">
       {{#md-card-extended title="Projects"
           titleClass="orange-text"
+          titleLink="projects"
           image="/hands.jpg"
           id="card-reveal"
           classNames="height-84"
@@ -73,16 +74,20 @@
           image="/hands.jpg"
           id="image-card-4"
           classNames="height-42"
-          activator=true}}
+          activator=true
+          holdVeil=true}}
 
 
           {{#md-card-reveal-extended classNames="lilac"}}
-            <div class="row">
-              <div class="col s6 offset-l3 l3 center">
+            <div class="row contact">
+              <div class="col s2 offset-s3 center">
                 <a href="https://www.twitter.com/jjordan_dev"><img class="social-icon" src="/twitter.svg"/></a>
               </div>
-              <div class="col s6 l3 center">
+              <div class="col s2 center">
                 <a href="https://www.twitter.com/jjordan_dev"><i class="material-icons mail-icon white-text">mail</i></a>
+              </div>
+              <div class="col s2 center">
+                <a href="https://www.twitter.com/jjordan_dev"><img class="social-icon linkedin" src="/linkedin.png"/></a>
               </div>
             </div>
           {{/md-card-reveal-extended}}

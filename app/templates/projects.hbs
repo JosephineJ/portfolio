@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <header class="main-header col s12">
+      <h1>Projects</h1>
+    </header>
+  </div>
+  {{#each model as |project|}}
+    <section class="row">
+      <div class="col s12">
+        <h2>{{project.name}}</h2>
+      </div>
+    </section>
+  {{/each}}
+</div>
+  {{outlet}}

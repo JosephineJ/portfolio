@@ -62,14 +62,28 @@ html, body {
       bottom: 1.5vh;
       left: 3vh;
     }
-    .social-icon {
-      height: 10vh;
-      width: auto;
-      margin: 0 auto;
-    }
-    .mail-icon {
-      font-size: 9vh;
-      margin: .5vh auto 0;
+    .contact {
+       a {
+         position: relative;
+         top: 12vh;
+       }
+      .social-icon {
+        height: 6vh;
+        width: auto;
+        margin: 0 auto;
+        &:hover {
+          -webkit-filter: sepia(100%); 
+          filter: hue-rotate(180deg);
+        }
+        &.linkedin {
+          height: 4vh;
+          margin-top: .9vh;
+        }
+      }
+      .mail-icon {
+        font-size: 5vh;
+        margin: .5vh auto 0;
+      }
     }
   }
   

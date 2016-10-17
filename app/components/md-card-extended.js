@@ -7,6 +7,9 @@ export default MdCard.extend({
     e.target.click();
   },
   mouseLeave(e){
-    Ember.$(e.target).find('.activator').click();
+    if (this.get('holdVeil') === undefined){
+      Ember.$(e.target).find('.activator').click();
+    }
+    return false;
   }
 });
