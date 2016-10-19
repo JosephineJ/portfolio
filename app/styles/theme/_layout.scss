@@ -1,16 +1,27 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
 }
 html, body {
   height: 100vh;
 }
 .main-header {
   h1 {
+    text-align: center;
     font-size: 4vh;
     margin: 3.5vh 0 2.5vh 0;
   }
+
+  &.desktop  {
+    h1 {
+     text-align: left;
+    }
+  }
+  
 }
-.card {
+h2 {
+  font-size: 3.5vh;
+}
+.md-card-extended {
  
   overflow: hidden; 
   @for $i from 1 through 100 {
@@ -100,5 +111,56 @@ html, body {
       margin-left: -0.75rem;
       margin-right: -0.75rem;
     }
+  }
+}
+
+.sorter {
+    text-align: center;
+
+  .sort-link {
+    font-size: 3vh;
+    margin: 3.5vh 0 2.5vh 1vh;
+    color: $gray;
+    text-transform: uppercase;
+    @include vendor(transition, color .2s ease-in);
+    
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+}
+
+.main-nav {
+  height: 0;
+  background-color: transparent;
+  position: relative;
+
+  .nav-item {
+    position: absolute;
+    top: 1vh;
+    margin: 0 auto;
+
+    @for $i from 1 through 12 {
+      @if $i % 2 == 0 {
+        &:nth-child(#{$i}){
+          color: blue;
+          left: $i * 2vh;
+        }
+      }
+      @else {
+        &:nth-child(#{$i}){
+          color: red;
+          right:$i * 2vh;
+        }
+      }
+    }
+
+    &:nth-child(1){
+      left: auto;
+      right: auto;
+      color: #fff;
+    }
+
+
   }
 }

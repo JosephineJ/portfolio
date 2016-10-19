@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('projects');
+  this.route('linkedin');
 });
 
 export default Router;

@@ -1,15 +1,48 @@
-<div class="container">
-  <div class="row">
-    <header class="main-header col s12">
-      <h1>Projects</h1>
+  <header class="row main-header desktop hide-on-small-only">
+      <h1 class="col s12 m6">Projects</h1>
+      <span class="col s12 m6 pull-right sorter hide-on-small-only">
+        {{#each uniqueTechs as |tech|}}
+          {{#link-to "projects" (query-params tech=tech.name) classNames="sort-link desktop right"}}{{tech.name}}{{/link-to}}
+        {{/each}}
+      </span>
     </header>
-  </div>
-  {{#each model as |project|}}
-    <section class="row">
+  <header class="row main-header mobile hide-on-med-and-up">
+      <h1 class="col s12 m6">Projects</h1>
+      <p class="sorter hide-on-med-and-up col s12">
+        {{#each uniqueTechs as |tech|}}
+          {{#link-to "projects" (query-params tech=tech.name) classNames="sort-link"}}{{tech.name}}{{/link-to}}
+        {{/each}}
+      </p>
+      <p class="center">{{filteredProjects.length}} Projects</p>
+    </header>
+  {{#each filteredProjects as |project|}}
+    <section class="row mt-5">
       <div class="col s12">
-        <h2>{{project.name}}</h2>
+        <div class="row">
+          <div class="col s12">
+            {{#if project.slides}}
+              {{md-slider slides=project.slides}}
+            {{/if}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            {{#md-card title=project.name id=project.name }}
+                {{#md-card-content}}
+                    {{project.desc}}
+                {{/md-card-content}}
+                {{#md-card-action}}
+                {{#if project.tech}}
+                    {{#each project.tech as |tech|}}
+                      {{#link-to "projects" (query-params tech=tech.name)}}{{tech.name}}{{/link-to}}
+                    {{/each}}
+                {{/if}}
+                {{/md-card-action}}
+            {{/md-card}}
+          </div>
+        </div>
       </div>
+      <hr>
     </section>
   {{/each}}
-</div>
   {{outlet}}
