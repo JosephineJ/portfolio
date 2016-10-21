@@ -1,4 +1,4 @@
- <div class="row">
+ <div class="row no-margin">
     <div class="col s12 l6">
       {{#md-card-extended title="Projects"
           titleClass="orange-text"
@@ -22,7 +22,7 @@
       {{/md-card-extended}}
     </div>
     <div class="col s12 l6">
-      <div class="row">
+      <div class="row no-margin">
         <div class="col s6">
       {{#md-card-extended title="CV"
           titleClass="orange-text"
@@ -47,18 +47,19 @@
         <div class="col s6">
       {{#md-card-extended title="Talks"
           titleClass="white-text"
+          titleLink="index"
           image="/hands.jpg"
           id="image-card-3"
           classNames="height-42"
-          activator=false
+          activator=true
           textColor="white-text"}}
 
           {{#md-card-content}}
-              <p class="white-text">Coming Soon. Promise.</p>
+              
           {{/md-card-content}}
 
           {{#md-card-reveal-extended classNames="dark-punk"}}
-                and here is some more stuff happening
+               <p class="white-text">Coming Soon. Promise.</p>
           {{/md-card-reveal-extended}}
 
       {{/md-card-extended}}

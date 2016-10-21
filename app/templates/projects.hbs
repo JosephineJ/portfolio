@@ -2,7 +2,9 @@
       <h1 class="col s12 m6">Projects</h1>
       <span class="col s12 m6 pull-right sorter hide-on-small-only">
         {{#each uniqueTechs as |tech|}}
-          {{#link-to "projects" (query-params tech=tech.name) classNames="sort-link desktop right"}}{{tech.name}}{{/link-to}}
+          {{#filter-tag classNames="right" currentlyActiveFilter=activeFilter action='changeFilter'}}
+            {{#link-to "projects" (query-params tech=tech.name) classNames="sort-link desktop"}}{{tech.name}}{{/link-to}}
+          {{/filter-tag}}
         {{/each}}
       </span>
     </header>
@@ -15,6 +17,11 @@
       </p>
       <p class="center">{{filteredProjects.length}} Projects</p>
     </header>
+    <div class="row">
+      <div class="col s2 offset-s10">
+        {{#link-to "index" classNames="default-text right back-navigation"}}<i class="material-icons white-text medium">keyboard_arrow_right</i>{{/link-to}}
+      </div>
+    </div>
   {{#each filteredProjects as |project|}}
     <section class="row mt-5">
       <div class="col s12">

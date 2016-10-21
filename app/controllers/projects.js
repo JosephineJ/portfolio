@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
   queryParams: ['tech'],
   tech: null,
 
+  activeFilter: null,
+
   filteredProjects: Ember.computed('tech', 'model', function(){
     var tech = this.get('tech');
     var projects = this.get('model');
@@ -32,5 +34,12 @@ export default Ember.Controller.extend({
     return techList.uniqBy('name');
 
     //console.log("tech: " + JSON.stringify(techList));
-  })
+  }),
+
+  actions: {
+    changeFilter(el){
+      console.log("controller set filter");
+      this.set('activeFilter', el);
+    }
+  }
 });

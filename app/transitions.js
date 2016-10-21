@@ -1,0 +1,20 @@
+export default function(){
+  this.transition(
+    this.fromRoute('index'),
+    this.toRoute('linkedin'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('index'),
+    this.toRoute('projects'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  );
+  this.transition(
+    this.fromRoute('linkedin'),
+    this.toRoute('projects'),
+    this.use('toUp'),
+    this.reverse('toDown')
+  );
+};

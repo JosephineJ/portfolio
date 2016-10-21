@@ -1,14 +1,14 @@
 body {
   background-color: #f2f2f2;
 }
-html, body {
+html, body, .main-container {
   height: 100vh;
 }
 .main-header {
   h1 {
     text-align: center;
-    font-size: 4vh;
-    margin: 3.5vh 0 2.5vh 0;
+    font-size: 3vh;
+    margin: 3vh 0 2.5vh 0;
   }
 
   &.desktop  {
@@ -117,16 +117,27 @@ h2 {
 .sorter {
     text-align: center;
 
-  .sort-link {
-    font-size: 3vh;
+  .filter-tag {
+    padding: 0 .5vw;
     margin: 3.5vh 0 2.5vh 1vh;
+   
+   .sort-link {
+    font-size: 2vh;
     color: $gray;
     text-transform: uppercase;
     @include vendor(transition, color .2s ease-in);
-    
     &:hover {
       color: $dark-gray;
     }
+   }
+   
+   &.active {
+     .sort-link {
+       color: #fff;
+     }
+   }
+    
+
   }
 }
 
@@ -135,32 +146,96 @@ h2 {
   background-color: transparent;
   position: relative;
 
-  .nav-item {
-    position: absolute;
-    top: 1vh;
-    margin: 0 auto;
+  .nav-item-list {
+     width: 18vw;
+     height: 3em;
+     margin: 0 auto;
+     position: relative;
+     top: -4em;
+     cursor: pointer;
+     background-color: transparent;
+     @include vendor(transition, top .4s ease-in);
 
-    @for $i from 1 through 12 {
-      @if $i % 2 == 0 {
-        &:nth-child(#{$i}){
-          color: blue;
-          left: $i * 2vh;
-        }
-      }
-      @else {
-        &:nth-child(#{$i}){
-          color: red;
-          right:$i * 2vh;
-        }
-      }
-    }
+     &:hover, &.active {
+       top: -1.5em;
+       
+       .nav-item:nth-child(1){
+         &:after {
+          bottom: -.5em;
+         }
+       }
+     }
 
-    &:nth-child(1){
-      left: auto;
-      right: auto;
+    .nav-item {
       color: #fff;
-    }
+      position: absolute;
+      bottom: 0em;
+      margin: 0 auto;
+      text-align: left;
+      @include vendor(transition, color .2s ease-in);
 
+      &:after {
+        font-size: 2.5em;
+        content:"|";
+        display: block;
+        text-align: left;
+        position: relative;
+        bottom: -.5em;
+        left: 0;
+        right: 0;
+      }
+      
+      &:hover {
+        color: $dark-gray;
+      }
+
+      @for $i from 1 through 12 {
+        @if $i % 2 == 0 {
+          &:nth-child(#{$i}){
+            left: - $i * 1vw + 4 * 2vw;
+
+            @include vendor(transform, rotate(#{$i*10}deg));
+          }
+        }
+        @else {
+          &:nth-child(#{$i}){
+            right: - $i * 1vw + 4 * 2vw + 1vw;
+
+            @include vendor(transform, rotate(#{-$i*10+10}deg));
+          }
+        }
+      }
+
+      &:nth-child(1){
+        left: auto;
+        right: auto;
+        @include vendor(transform, rotate(0deg));
+        
+        &:after {
+          left: -.1em;
+          bottom: -1.5em;
+          @include vendor(transition, bottom .6s ease-in);
+        }
+      }
+
+
+    }
+  }
+}
+.back-navigation {
+  bottom: 0;
+}
+
+.filter-tag {
+  border-radius: 2em;
+  border-color: transparent;
+  border-style: solid;
+  border-width: .15em;
+  background-color: transparent;
+  @include vendor(transition, all .2s ease-in);
+
+  &.active {
+    background-color: $punk;
 
   }
 }
