@@ -3,4 +3,11 @@
     <img src="{{image}}" class="{{if activator 'activator'}}"/>
   </div>
 {{/if}}
+{{#if icon}}
+  <div class="card-image center {{if activator 'waves-effect'}} {{if activator 'waves-block'}} {{if activator 'waves-light'}}">
+    <div class="icon-tile {{if activator 'activator'}}">
+      <i class="material-icons large">{{icon}}</i>
+    </div>
+  </div>
+{{/if}}
 {{yield}}

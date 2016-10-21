@@ -34,14 +34,43 @@ h2 {
     
     overflow: hidden;
 
-    img {
+    img{
       height: 100%;
       width: auto;
+      bottom: 0;
+      top: -20vh;
+    }
+
+    .icon-tile {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 999em;
+      position: relative;
+      
+      i {
+        color: $dark-gray;
+        position: relative;
+        top: 12vh;
+      }
     }
   }
   .card-content {
     position: absolute;
     bottom: 0;
+  }
+  &.gif-tile {
+    .card-image {
+      img {
+        position: relative;
+        height: 120em;
+        width: auto;
+        top: -17.5em;
+        left: -60em;
+        bottom: auto;
+      }
+    }
   }
 }
 
@@ -118,11 +147,11 @@ h2 {
     text-align: center;
 
   .filter-tag {
-    padding: 0 .5vw;
-    margin: 3.5vh 0 2.5vh 1vh;
+    padding: 0 .25vw;
+    margin: 3.5vh 0 2.5vh .2vh;
    
    .sort-link {
-    font-size: 2vh;
+    font-size: 1.5vh;
     color: $gray;
     text-transform: uppercase;
     @include vendor(transition, color .2s ease-in);
@@ -227,7 +256,7 @@ h2 {
 }
 
 .filter-tag {
-  border-radius: 2em;
+  border-radius: .5em;
   border-color: transparent;
   border-style: solid;
   border-width: .15em;

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'div',
+  tagName: 'span',
   classNames: ['filter-tag'],
   classNameBindings: ['isActive:active'],
   currentlyActiveFilter: null,
