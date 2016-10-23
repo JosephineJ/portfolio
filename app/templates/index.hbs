@@ -1,0 +1,96 @@
+ <div class="row no-margin">
+    <div class="col s12 l6">
+      {{#md-card-extended title="Projects"
+          titleClass="orange-text"
+          titleLink="projects"
+          image="/hands-framed.jpg"
+          id="card-reveal"
+          classNames="height-84"
+          activator=true
+          textColor="white-text"}}
+
+          {{#md-card-content}}
+              I am a very simple card. I am good at containing
+              small bits of information. I am convenient because
+              I require little markup to use effectively.
+          {{/md-card-content}}
+
+          {{#md-card-reveal-extended classNames="punk"}}
+
+          {{/md-card-reveal-extended}}
+
+      {{/md-card-extended}}
+    </div>
+    <div class="col s12 l6">
+      <div class="row no-margin">
+        <div class="col s6">
+      {{#md-card-extended title="CV"
+          titleClass="orange-text"
+          titleLink="linkedin"
+          icon="class"
+          id="image-card-2"
+          activator=true
+          classNames="height-42"
+          textColor="grey-text"}}
+
+
+          {{#md-card-reveal-extended classNames="what"}}
+
+          {{/md-card-reveal-extended}}
+
+
+
+      {{/md-card-extended}}
+        </div>
+        <div class="col s6">
+      {{#md-card-extended title="Talks"
+          titleClass="white-text"
+          titleLink="index"
+          image="/hands-framed-flat.jpg"
+          id="image-card-3"
+          classNames="height-42"
+          activator=true
+          textColor="white-text"}}
+
+          {{#md-card-content}}
+              
+          {{/md-card-content}}
+
+          {{#md-card-reveal-extended classNames="dark-punk"}}
+               <p class="white-text">Coming Soon. Promise.</p>
+          {{/md-card-reveal-extended}}
+
+      {{/md-card-extended}}
+        </div>
+        <div class="col s12">
+      {{#md-card-extended title="Contact"
+          titleClass="orange-text"
+          image="/dancing.gif"
+          id="image-card-4"
+          classNames="height-42 gif-tile"
+          activator=true
+          holdVeil=true
+          textColor="white-text"}}
+
+
+          {{#md-card-reveal-extended classNames="lilac"}}
+            <div class="row contact">
+              <div class="col s2 offset-s3 center">
+                <a href="https://www.twitter.com/jjordan_dev"><img class="social-icon" src="/twitter.svg"/></a>
+              </div>
+              <div class="col s2 center">
+                <a href="mailto:jessica.jordan.fe.dev@gmail.com"><i class="material-icons mail-icon white-text">mail</i></a>
+              </div>
+              <div class="col s2 center">
+                <a href="https://uk.linkedin.com/in/jessicajordanfedev"><img class="social-icon linkedin" src="/linkedin.png"/></a>
+              </div>
+            </div>
+          {{/md-card-reveal-extended}}
+
+      {{/md-card-extended}}
+        </div>
+      </div>
+    </div>
+  </div>
+{{outlet}}
+

@@ -1,27 +1,27 @@
-<div class="bg">
-   {{#if topHidden}}
-     <div class="one-hundred">
-		<div class="socket">
-			<div class="window clearfix">
-				{{main-nav content="Main-Nav" topHidden=topHidden}}
-				<div class="col-md-2"></div>
-				<section id="main-content" class="main-content col-md-10">
-					{{outlet}}
-				</section>
-			</div>
-			<footer id="mfooter" class="main-footer clearfix flowing">
-		<a href="https://twitter.com/jjordan_dev" class="col-sm-1" target="_blank">{{fa-icon 'twitter'}}</a>
-		<a href="https://github.com/JosephineJ" class="col-sm-1" target="_blank">{{fa-icon 'github'}}</a>
-		<a href="https://www.linkedin.com/in/jessicajordanfedev" class="col-sm-1" target="_blank">{{fa-icon 'linkedin'}}</a>
-		<a href="https://www.xing.com/profile/Jessica_Jordan2" class="col-sm-1" target="_blank">{{fa-icon 'xing'}}</a>
-		<a href="https://www.facebook.com/jessica.jordan.front.end.developer" class="col-sm-1" target="_blank">{{fa-icon 'facebook'}}</a>
-		<a href="https://angel.co/jessica-jordan-3" class="col-sm-1" target="_blank">{{fa-icon 'angellist'}}</a>
-		<span class=" footer-item col-sm-2">&#169; 2015 Jessica Jordan</span>	
-		{{#link-to 'imprint' classNames="footer-item col-sm-2" }}Imprint{{/link-to}}
-	</footer>
-		</div>
-	</div>
-   {{else}}
-		{{outlet}}
-	{{/if}}
+<div class="container main-container">
+  <div class="row no-margin">
+     <header class="main-header hide-on-med-and-up">
+     <div class="col s12">
+      <h1>{{#link-to "index" classNames="default-text" }}Jessica Jordan{{/link-to}}</h1>
+     </div>
+     <div class="col center s12">
+      {{#if notIndexRoute}}
+        {{#link-to "index" classNames="default-text center back-navigation"}}
+          <i class="material-icons  medium">keyboard_arrow_right</i>
+        {{/link-to}}
+      {{/if}}
+     </div>
+   
+    </header> 
+    <header class="col s12 main-header desktop hide-on-small-only">
+         <h1>{{#link-to "index" classNames="default-text" }}Jessica Jordan{{/link-to}}
+      {{#if notIndexRoute}}
+        {{#link-to "index" classNames="default-text right back-navigation"}}
+          <i class="material-icons  medium">keyboard_arrow_right</i>
+        {{/link-to}}
+      {{/if}}
+</h1>
+    </header>
+  </div>
+{{liquid-outlet}}
 </div>

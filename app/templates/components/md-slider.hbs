@@ -1,0 +1,13 @@
+<ul class="slides">
+{{#each slides as |slide|}}
+  <li>
+    <img src={{slide.imgUrl}} alt={{slide.alt}}>
+    <div class="caption center-align">
+    {{#if slide.caption}}
+      <h3>{{slide.caption}}</h3>
+    {{/if}}
+    </div>
+  </li>
+{{/each}}
+</ul>
+
