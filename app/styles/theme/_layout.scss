@@ -38,7 +38,7 @@ h2 {
       height: 100%;
       width: auto;
       bottom: 0;
-      top: -20vh;
+      top: 0;
     }
 
     .icon-tile {
@@ -252,7 +252,18 @@ h2 {
   }
 }
 .back-navigation {
-  bottom: 0;
+  top: -1.5vh;
+  position: relative;
+  i {
+    color: #fff;
+    @include vendor(transition, color .2s ease-in);
+  }
+
+  &:hover {
+    i {
+      color: $dark-gray;
+    }
+  }
 }
 
 .filter-tag {

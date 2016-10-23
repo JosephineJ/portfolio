@@ -1,8 +1,4 @@
-    <div class="row">
-      <div class="col s2 offset-s10">
-        {{#link-to "index" classNames="default-text right back-navigation"}}<i class="material-icons white-text medium">keyboard_arrow_right</i>{{/link-to}}
-      </div>
-    </div>
+
   <header class="row main-header desktop hide-on-small-only">
       <h1 class="col s12 m6">Projects</h1>
       <div class="col s12 pull-right sorter hide-on-small-only">
@@ -43,7 +39,7 @@
                 {{#md-card-action}}
                 {{#if project.tech}}
                     {{#each project.tech as |tech|}}
-                        {{#link-to "projects" (query-params tech=tech.name)}}{{tech.name}}{{/link-to}}
+                        {{#link-to "projects" (query-params tech=tech.name) action='setFilter'}}{{tech.name}}{{/link-to}}
                     {{/each}}
                 {{/if}}
                 {{/md-card-action}}

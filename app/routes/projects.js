@@ -5,7 +5,7 @@ const mockModel = [
         "name": "Software Development @ Earlham Institute, Norwich (UK)",
         "param": "my",
         "imgUrl": "assets/hands.jpg",
-        "desc": "Redesign and development of the project website based on Ghost CMS. Development of an user interface for exploring human SNP data using BioJS components, D3.js, Ember.js, Express.js and MongoDB. Organisation of JavaScript Workshops. Org Administration of the BioJS project in Google Summer of Code.",
+        "desc": "Redesign and development of the project website based on Ghost CMS at biojs.net. Development of an user interface for exploring human SNP data using BioJS components, D3.js, Ember.js, Express.js and MongoDB. Organisation of JavaScript Workshops. Org Administration of the BioJS project in Google Summer of Code.",
         "slides": [
           {"imgUrl":"/abc2.jpg",
            "alt":"Anita Borg Celebration JS Intro Snapshot",

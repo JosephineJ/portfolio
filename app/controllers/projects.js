@@ -17,12 +17,12 @@ export default Ember.Controller.extend({
           var filterTech = el.tech.filterBy('name', tech);
           return filterTech.length > 0;
       });
-      console.log("filter: " + filter);
+
       return filter;
  
     }
     else {
-      console.log("didnt filter at all");
+
       return projects;
     }
   }),
@@ -38,8 +38,11 @@ export default Ember.Controller.extend({
 
   actions: {
     changeFilter(el){
-      console.log("controller set filter");
+
       this.set('activeFilter', el);
-    }
+    },
+   setFilter() {
+     console.log("set filter in controller");
+   }
   }
 });
