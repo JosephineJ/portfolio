@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import MdCard from 'ember-cli-materialize/components/md-card';
 //import layout from '/templates/components/md-card';
 

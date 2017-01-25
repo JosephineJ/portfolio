@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   currentlyActiveFilter: null,
   isActive: Ember.computed('currentlyActiveFilter', function(){
     let currentActive = this.get('currentlyActiveFilter');
-    return this === this.get('currentlyActiveFilter');
+    return this === currentActive;
   }),
   click(){
     this.sendAction('action', this);

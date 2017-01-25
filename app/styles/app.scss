@@ -3,9 +3,12 @@ $punk: rgba(200,80,200,0.75);
 $dark-punk: darken($punk, 40%);
 $lilac: violet;
 $gray: rgba(200,200,200,0.75);
+$mid-gray: darken($gray, 15%);
 $dark-gray: darken($gray, 40%);
 $what: rgba(255,255,255,0.75);
 $black: rgba(0,0,0,0.87);
+$my-pink: #dd77dd;
+$my-white: #ffefef;
 
 //import materialize
 @import 'components/color';

@@ -17,4 +17,4 @@ export default function(){
     this.use('toUp'),
     this.reverse('toDown')
   );
-};
+}

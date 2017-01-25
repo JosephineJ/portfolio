@@ -152,7 +152,7 @@ h2 {
    
    .sort-link {
     font-size: 1.5vh;
-    color: $gray;
+    color: $my-white;
     text-transform: uppercase;
     @include vendor(transition, color .2s ease-in);
     &:hover {
@@ -278,4 +278,7 @@ h2 {
     background-color: $punk;
 
   }
+}
+.page-title {
+  font-size: 5vh;
 }

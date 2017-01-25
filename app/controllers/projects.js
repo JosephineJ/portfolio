@@ -9,11 +9,10 @@ export default Ember.Controller.extend({
   filteredProjects: Ember.computed('tech', 'model', function(){
     var tech = this.get('tech');
     var projects = this.get('model');
-    var res = [];
 
     if (tech){
       
-      var filter = projects.filter(function(el,index){
+      var filter = projects.filter(function(el){
           var filterTech = el.tech.filterBy('name', tech);
           return filterTech.length > 0;
       });
@@ -32,8 +31,6 @@ export default Ember.Controller.extend({
     let techStack = projects.mapBy('tech');
     let techList = [].concat.apply([], techStack);
     return techList.uniqBy('name');
-
-    //console.log("tech: " + JSON.stringify(techList));
   }),
 
   actions: {
