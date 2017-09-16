@@ -12,6 +12,12 @@ export default function(){
     this.reverse('toLeft')
   );
   this.transition(
+    this.fromRoute('index'),
+    this.toRoute('talks'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  );
+  this.transition(
     this.fromRoute('linkedin'),
     this.toRoute('projects'),
     this.use('toUp'),
