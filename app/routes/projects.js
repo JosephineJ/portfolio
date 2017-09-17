@@ -4,22 +4,22 @@ const mockModel = [
       { "id": 1,
         "name": "Software Development @ Earlham Institute, Norwich (UK)",
         "param": "my",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Redesign and development of the project website based on Ghost CMS at biojs.net. Development of an user interface for exploring human SNP data using BioJS components, D3.js, Ember.js, Express.js and MongoDB. Organisation of JavaScript Workshops. Org Administration of the BioJS project in Google Summer of Code.",
         "slides": [
-          {"imgUrl":"/abc2.jpg",
+          {"imgUrl":"/assets/abc2.jpg",
            "alt":"Anita Borg Celebration JS Intro Snapshot",
            "caption": ""
           },
-          {"imgUrl":"/biojs.jpg",
+          {"imgUrl":"/assets/biojs.jpg",
            "alt":"BioJS Website Screenshot",
            "caption": ""
           },
-          {"imgUrl":"/abc2.jpg",
+          {"imgUrl":"/assets/abc2.jpg",
            "alt":"Anita Borg Celebration JS Intro Snapshot",
            "caption": ""
           },
-          {"imgUrl":"/tgac_outside.jpg",
+          {"imgUrl":"/assets/tgac_outside.jpg",
            "alt":"Overview Earlham Insitute, Norwich, UK",
            "caption": ""
           },
@@ -40,7 +40,7 @@ const mockModel = [
       { "id": 2,
         "name": "Front End Development @ PickPete.com",
         "slides": [
-          {"imgUrl":"/pete1.jpg",
+          {"imgUrl":"/assets/pete1.jpg",
            "alt":"Pick Pete Website Screenshot",
            "caption": ""
           }
@@ -55,7 +55,7 @@ const mockModel = [
       { "id": 3,
         "name": "Front End Development @ Voestalpine AG",
         "param":"my",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Development of an User Interface Addon for Ember.js Applications.",
         "tech": [
           {"name":"ember.js"},
@@ -65,14 +65,14 @@ const mockModel = [
       },
       { "id": 4,
         "name": "Front End Development & A/B Testing @ Mobility Media GmbH",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Development of user interface elements and landing pages for drivelog.de. A/B testing of new website features and conversion tracking. Content management in Liferay CMS.",
         "slides": [
-          {"imgUrl":"/dl2.png",
+          {"imgUrl":"/assets/dl2.png",
            "alt":"Screenshot Drivelog Landing Page B2B",
            "caption": ""
           },
-          {"imgUrl":"/dl1.png",
+          {"imgUrl":"/assets/dl1.png",
            "alt":"Screenshot Drivelog Main Page 2015",
            "caption": ""
           }
@@ -86,7 +86,7 @@ const mockModel = [
       },
       { "id": 5,
         "name": "Front End Development @ Instinkte",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Development of user interface for instinkte.eu  based on Wordpress CMS.",
         "tech": [
           {"name":"jquery"},
@@ -97,14 +97,14 @@ const mockModel = [
       },
       { "id": 6,
         "name": "Front End Development of Personal Web Comic Project 'Dusk'",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Development, Art and Design for my personal web comic project at www.dusk-comic.com",
         "slides": [
-          {"imgUrl":"/jugendkim-cut.jpg",
+          {"imgUrl":"/assets/jugendkim-cut.jpg",
            "alt":"Character of Webcomic Dusk - Jugendstil",
            "caption": ""
           },
-          {"imgUrl":"/dancedemoex.001.png",
+          {"imgUrl":"/assets/dancedemoex.001.png",
            "alt":"Demo Sketch Dusk Webcomic",
            "caption": ""
           }
@@ -119,10 +119,10 @@ const mockModel = [
       },
       { "id": 7,
         "name": "Mentoring @ OpenTechSchool Berlin (Germany)",
-        "imgUrl": "assets/hands.jpg",
+        "imgUrl": "/assets/hands.jpg",
         "desc": "Co-mentoring learners at weekly front end co-learning meetups.",
         "slides": [
-          {"imgUrl":"/ots.jpeg",
+          {"imgUrl":"/assets/ots.jpeg",
            "alt":"OpenTechSchool Berlin Colearning Snapshot",
            "caption": ""
           }
