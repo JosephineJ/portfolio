@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'portfolio-redo',
+    modulePrefix: 'portfolio',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -40,7 +40,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.rootURL = '/portfolio-redo/';
+    ENV.rootURL = '/portfolio/';
 
   }
 
