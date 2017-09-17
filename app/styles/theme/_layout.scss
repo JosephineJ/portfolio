@@ -16,14 +16,14 @@ html, body, .main-container {
      text-align: left;
     }
   }
-  
+
 }
 h2 {
   font-size: 3.5vh;
 }
 .md-card-extended {
- 
-  overflow: hidden; 
+
+  overflow: hidden;
   @for $i from 1 through 100 {
     &.height-#{$i}{
       height: 100vh * $i / 100 - 2;
@@ -31,7 +31,7 @@ h2 {
     }
   }
   .card-image {
-    
+
     overflow: hidden;
 
     img{
@@ -48,7 +48,7 @@ h2 {
       bottom: 0;
       height: 999em;
       position: relative;
-      
+
       i {
         color: $dark-gray;
         position: relative;
@@ -112,7 +112,7 @@ h2 {
         width: auto;
         margin: 0 auto;
         &:hover {
-          -webkit-filter: sepia(100%); 
+          -webkit-filter: sepia(100%);
           filter: hue-rotate(180deg);
         }
         &.linkedin {
@@ -155,7 +155,7 @@ h2 {
     margin-right: auto;
   }
   .container & {
-    
+
     &.no-margin {
       margin-left: -0.75rem;
       margin-right: -0.75rem;
@@ -169,7 +169,7 @@ h2 {
   .filter-tag {
     padding: 0 .25vw;
     margin: 3.5vh 0 2.5vh .2vh;
-   
+
    .sort-link {
     font-size: 1.5vh;
     color: $gray;
@@ -179,13 +179,13 @@ h2 {
       color: $dark-gray;
     }
    }
-   
+
    &.active {
      .sort-link {
        color: #fff;
      }
    }
-    
+
 
   }
 }
@@ -207,7 +207,7 @@ h2 {
 
      &:hover, &.active {
        top: -1.5em;
-       
+
        .nav-item:nth-child(1){
          &:after {
           bottom: -.5em;
@@ -233,7 +233,7 @@ h2 {
         left: 0;
         right: 0;
       }
-      
+
       &:hover {
         color: $dark-gray;
       }
@@ -259,7 +259,7 @@ h2 {
         left: auto;
         right: auto;
         @include vendor(transform, rotate(0deg));
-        
+
         &:after {
           left: -.1em;
           bottom: -1.5em;
@@ -305,6 +305,12 @@ h2 {
   -webkit-column-gap: 0;
   column-count: 3;
   column-gap: 0;
+
+  @media only screen
+    and (max-device-width: 736px) {
+      -webkit-column-count: 1;
+      column-count: 1;
+  }
 }
 
 .talk-col {

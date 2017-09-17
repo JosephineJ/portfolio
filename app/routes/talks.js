@@ -81,9 +81,9 @@ const mockModel = [
         "location": "Munich, Germany"
       },
       { "id": 8,
-        "event": "Ember London Meetup November 2017",
+        "event": "Ember London Meetup November 2016",
         "title": "Leveraging HTML5 animations using CSS3, Ember.js and friends",
-        "date": "2017/11/10",
+        "date": "2016/11/10",
         "type": "meetup",
         "status": "done",
         "imgUrl": "assets/jugendkim-cut.jpg",
