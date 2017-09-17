@@ -1,7 +1,0 @@
-<span class="card-title {{if parentView.textColor parentView.textColor}} {{if activator 'activator'}}">
- <i class="material-icons right">close</i>
-</span>
-<span class="card-main-title card-title">
-  {{#link-to  parentView.titleLink classNames=(if parentView.textColor parentView.textColor) }}{{parentView.title}}{{/link-to}}
-</span>
-<p class="{{if parentView.textColor textColor}}">{{yield}}</p>
