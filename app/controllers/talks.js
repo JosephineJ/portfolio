@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import { sort } from '@ember/object/computed';
+import Controller from '@ember/controller';
+import { computed } from '@ember/object';
 
-const { computed } = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   talkItems: computed('model.[]', function() {
     const model = this.get('model');
     return model.map((talk) => {
@@ -16,5 +16,5 @@ export default Ember.Controller.extend({
     });
   }),
   talkSort: ['location:desc'],
-  talks: computed.sort('talkItems', 'talkSort'),
+  talks: sort('talkItems', 'talkSort'),
 });

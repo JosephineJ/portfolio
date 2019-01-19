@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import MdCard from 'ember-cli-materialize/components/md-card';
 //import layout from '/templates/components/md-card';
 
@@ -8,7 +9,7 @@ export default MdCard.extend({
   },
   mouseLeave(e){
     if (this.get('holdVeil') === undefined){
-      Ember.$(e.target).find('.activator').click();
+      $(e.target).find('.activator').click();
     }
     return false;
   }

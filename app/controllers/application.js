@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
-  notIndexRoute: Ember.computed('currentRouteName', function(){
+export default Controller.extend({
+  notIndexRoute: computed('currentRouteName', function(){
     let currentRoute =  this.get('currentRouteName');
     return currentRoute !== 'index';
   })

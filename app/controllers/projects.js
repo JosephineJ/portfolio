@@ -1,12 +1,13 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   queryParams: ['tech'],
   tech: null,
 
   activeFilter: null,
 
-  filteredProjects: Ember.computed('tech', 'model', function(){
+  filteredProjects: computed('tech', 'model', function(){
     var tech = this.get('tech');
     var projects = this.get('model');
     var res = [];
@@ -27,7 +28,7 @@ export default Ember.Controller.extend({
     }
   }),
 
-  uniqueTechs: Ember.computed('model', function(){
+  uniqueTechs: computed('model', function(){
     let projects = this.get('model');
     let techStack = projects.mapBy('tech');
     let techList = [].concat.apply([], techStack);

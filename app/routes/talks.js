@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
 const mockModel = [
       { "id": 1,
@@ -91,7 +91,7 @@ const mockModel = [
         "location": "London, United Kingdom"
       },
      ];
-export default Ember.Route.extend({
+export default Route.extend({
   model(){
     return mockModel;
   }
