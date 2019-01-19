@@ -1,11 +1,10 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     sassOptions: {
-        includePaths: ['bower_components/materialize/sass']
+        // TODO: figure out how to configure with node_modules
+        includePaths: ['node_modules/materialize/sass']
     }
   });
 
